@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sova</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Alegreya+Sans+SC:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Berkshire+Swash&family=Bungee+Shade&family=Cinzel:wght@400..900&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+J+Guides:ital@0;1&family=Playwrite+ZA+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rye&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+        <!-- Add Font Awesome CDN link -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img class="l1" src="assets/images/Sova-logo.jpg" loading="lazy">
+        <div class="heading">
+            <h1>SOVA</h1>
+            <h3 class="h3">Gloves</h3>
+        </div>
+            
+        </div>
+        <div class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#mission">Mission</a></li>
+                <li><a href="#product">Product</a></li>
+                <li><a href="#gift">Rewards</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#about">About</a></li>
+              
+            </ul>
+        </div>
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        
+        <!-- Menu -->
+        <nav class="menu" id="menu">
+          <ul>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#mission" onclick="closeMenu()">Mission</a></li>
+            <li><a href="#product" onclick="closeMenu()">Product</a></li>
+            <li><a href="#gift" onclick="closeMenu()">Gift</a></li>
+            <li><a href="#reviews" onclick="closeMenu()">Reviews</a></li>
+            <li><a href="#about" onclick="closeMenu()">About us</a></li>
+          </ul>
+        </nav>
+
+         <!-- Donate Now Button -->
+      <div class="gift-container">
+        <a href="#gift" class="gift-btn">Contribute Now</a>
+      </div>
+
+    </header>
+
+    <div id="home" class="hero">
+        <div class="hero-message">
+            <p class="heading"></p>
+            <p class="author"></p>
+            <p class="appeal"></p>
+        </div>
+        <div class="section2">
+            <div class="content-container">
+                <div class="image-container">
+                    <div class="image-carousel"></div>
+                </div>
+                <div class="hero-description">
+                    <p class="hero-heading"></p>
+                    <p class="hero-info"></p>
+                    <div class="video-container">
+                       <video class="video" autoplay loop muted>
+                            <source src="" type="video/mp4" >
+                            Your browser does not support the video tag.
+                        </video>
+                      
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <div id="timer-container">
+      <h2>Mission ends in</h2>
+      <div id="timer">
+          <div class="time-box">
+              <span id="days">00</span>
+              <div class="label">Days</div>
+          </div>
+          <div class="time-box">
+              <span id="hours">00</span>
+              <div class="label">Hours</div>
+          </div>
+          <div class="time-box">
+              <span id="minutes">00</span>
+              <div class="label">Minutes</div>
+          </div>
+          <div class="time-box">
+              <span id="seconds">00</span>
+              <div class="label">Seconds</div>
+          </div>
+      </div>
+  </div>
+
+
+    <section id="gift" class="rewards-section">
+        <h2 class="rewards-title">"Become a part of this Mission"</h2>
+    
+        <section class="certificate-section">
+          <div class="certificate-card">
+            <!-- <img src="images/certificate.webp" alt="Certificate of Appreciation" class="certificate-image"> -->
+            <div class="certificate-description">
+              <h3>Certificate of Appreciation</h3>
+              <p>
+                Every contributor is a hero in our mission to protect the hands that shape the world. To honor your generosity, we present this personalized Certificate of Appreciation along with some gifts as a token of gratitude for your invaluable contribution. Together, we are making a difference.
+              </p>
+              <div class="rewards-container">
+              
+
+              </div>
+              
+              
+            </div>
+          </div>
+        </section>
+        
+          <!-- Reward 1 -->
+          
+          <div id="formContainer" class="form-container" style="display: none;">
+            <button id="closeBtn" class="close-button">✖</button>
+            <form action="" id="userForm" class="form-content">
+                <h2>Contributor Information</h2>
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" placeholder="Enter your address" rows="4" required></textarea>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        
+                <label for="title">Title</label>
+                <div id="title"  class="donortitle"></div>
+        
+                <label for="amount">Contribution</label>
+                <div class="amount-container">
+                    <button type="button" id="decreaseBtn">-</button>
+                    <h3 class="a8" id="amountDisplay"></h3>
+                    <button type="button" id="increaseBtn">+</button>
+                </div>
+        
+                <button style="background-color: rgb(126, 73, 239); font-family: 'Poppins';" type="submit" id="submitBtn">Pay: ₹<span id="totalAmount">0</span>.00</button>
+            </form>
+        </div>
+      
+        <div class="alert">Payment Successful. Thank you for Contribution.</div>
+          
+  
+      
+      </section>
+
+
+      <div class="container-scroll">
+        <h1>Sova Mission Progress</h1>
+        <div class="indicator-section" id="indicatorSection">
+            <div class="indicator-card" id="donationsCard">
+                <div class="indicator-logo">
+                    <i class="fas fa-donate"></i>
+                </div>
+                <h2 id="donations">INR 0</h2>
+                <p>Total Contributions</p>
+            </div>
+            <div class="indicator-card" id="farmersCard">
+                <div class="indicator-logo">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h2 id="farmers">0</h2>
+                <p>Farmers Reached</p>
+            </div>
+            <div class="indicator-card" id="supportersCard">
+                <div class="indicator-logo">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h2 id="supporters">0</h2>
+                <p>People Cooperated</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="mission" class="mission">
+      <div class="mission-card">
+        <h2 id="mission-heading">Our Mission: Protecting the Hands That Shape Our Future</h2>
+        <p id="mission-text">
+          Every day, millions of unsung heroes—farmers, laborers, and workers—are on the front lines of life. Their hands, calloused and worn, are the driving force behind the crops we eat, the homes we live in, and the communities we thrive in. But these hands suffer in silence. They endure pain, injuries, and relentless toil without the protection they desperately need.  
+          <br><br>
+          At <strong>Sova</strong>, we don’t just make gloves. We create a lifeline. A lifeline for those whose hands bear the weight of the world. Our gloves are more than just tools—they are shields. Shields against harsh conditions, against injury, and against the strain of endless labor. We’re bringing a revolution in hand care, empowering those who build, grow, and create the world we live in.
+          <br><br>
+          Imagine the power of gifting a pair of Sova gloves to someone who needs it. You’re not just giving gloves—you’re gifting protection, comfort, and dignity. Together, we can transform lives and ensure that every hand gets the care it deserves.
+          <br><br>
+          Join us in this journey. Let’s make a stand for the hands that shape the future. Let’s protect them, empower them, and honor them with Sova gloves.
+        </p>
+  
+        <!-- Video Grid Section -->
+        <div class="image-grid">
+          <video id="video1" class="mission-image" autoplay loop muted preload="none">
+            <!-- Video will be dynamically inserted here -->
+          </video>
+          <video id="video2" class="mission-image" autoplay loop muted preload="none">
+            <!-- Video will be dynamically inserted here -->
+          </video>
+          <video id="video3" class="mission-image" autoplay loop muted preload="none">
+            <!-- Video will be dynamically inserted here -->
+          </video>
+        </div>
+        
+        <p class="Sources" id="sources">Sources:</p>
+        <ul>
+          <li>"Silent Occupational Hazard: Carpal Tunnel Syndrome in Farmers" - SIU School of Medicine</li>
+          <li>"Hand-arm vibration syndrome in laborers" - National Center for Biotechnology Information</li>
+          <li>"The Importance of Ergonomics and Protective Gear for Farmers" - Oregon State University Small Farms</li>
+        </ul>
+      </div>
+    </section>
+
+      <section id="product" class="product">
+        <div class="product-container">
+            <h2>Why Sova Gloves</h2>
+            <h3>Made in Bharat for Bharat.</h3>
+            <div class="product-layout">
+                <div class="features-left" id="features-left"></div>
+                <div class="product-image">
+                    <img class="product-img" src="assets/images/daily shield.png" alt="Product Image" />
+                    <div class="product-placeholder"></div>
+                </div>
+                <div class="features-right" id="features-right"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="web-products">
+      <p class="web-heading">Our Products</p>
+      <div id="product-wrapper" class="product-wrapper">
+        <!-- Products will be dynamically injected here -->
+      </div>
+    </div>
+
+
+    <div class="donor-reviews-section">
+      <h2 class="section-title">Recent Contributors</h2>
+      <input 
+        type="text" 
+        id="search-bar" 
+        placeholder="Search for your name..." 
+        oninput="searchDonor()" 
+        class="search-bar"
+      />
+      <div id="donor-reviews-container">
+        <!-- Dynamic donor reviews will be injected here -->
+      </div>
+      <div class="button-arrange">
+        <button id="prev-btn" onclick="showPrevious()">Previous</button>
+        <button id="next-btn" onclick="showNext()">Next</button>
+      </div>
+
+      If you are not able to see you name in list please refresh the page.
+    </div>
+
+      
+
+      <section class="vote-of-thanks">
+        <div class="vote-header">
+          
+          <h2>Vote of Thanks</h2>
+         
+        </div>
+      </section>
+
+      <section class="customer-reviews-section">
+        <div class="review-item2">
+          Coming Soon with a lot of positivity...
+          <!-- <img src="images/farmer1.jpg" alt="Customer Photo" class="review-photo"> -->
+          <!-- <div class="review-text">
+            <h3 class="reviewer-name">John Doe</h3>
+            <p class="review-comment">"The product is simply amazing! It has transformed the way I work. Highly recommend it!"</p>
+          </div>
+        </div>
+        <div class="review-item2">
+          <img src="images/farmer3.jpg" alt="Customer Photo" class="review-photo">
+          <div class="review-text">
+            <h3 class="reviewer-name">Jane Smith</h3>
+            <p class="review-comment">"Superb quality and excellent customer service. I am a happy customer!"</p>
+          </div>
+        </div>
+        <div class="review-item2">
+          <img src="images/farmer5.jpg" alt="Customer Photo" class="review-photo">
+          <div class="review-text">
+            <h3 class="reviewer-name">Sam Wilson</h3>
+            <p class="review-comment">"I love this product! It has exceeded my expectations in every way."</p>
+          </div>
+        </div> -->
+      </section>
+
+      <section class="faq-section">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Why are Sova Gloves more than just gloves?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sova Gloves are a revolution. They are designed to be a shield, offering not just protection but a sense of empowerment to the hands that shape our world—whether you’re a farmer, laborer, or homemaker. Sova Gloves protect your hands and dignify your work.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can something as simple as gloves change lives?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Every day, millions of hardworking hands face pain, injury, and strain. Sova Gloves are designed to be the solution to this silent struggle. By offering comfort, protection, and durability, they ensure that these hands can continue their important work without fear of injury, making a tangible difference in lives.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Why should I trust Sova Gloves for my most demanding tasks?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Sova Gloves are not just about strength—they’re about care. Crafted for the toughest environments, they are built to endure harsh conditions like construction, farming, and dishwashing. Their durability and comfort make them the ultimate partner for your most challenging tasks. Feel the difference with every use!</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can I be sure that Sova Gloves will last through the toughest days?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>At Sova, we believe that quality is non-negotiable. Our gloves undergo rigorous testing to withstand the harshest conditions. Whether you’re lifting heavy materials, working in water, or facing abrasive surfaces, Sova Gloves will remain strong, durable, and reliable—every single day.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What does it mean to be part of the Sova mission?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Joining the Sova mission is more than just wearing gloves. It’s about supporting the hardworking hands that build, nurture, and create our world. It’s about showing that we care for the hands that often go unnoticed. By choosing Sova, you’re helping us create a movement of care and respect for the hands that matter the most.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How does Sova make me part of something bigger?</h3>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>When you gift Sova Gloves, you’re not just protecting hands; you’re becoming a part of a global movement that empowers those who work tirelessly with their hands. You’re helping to change the narrative of care for hardworking individuals across the world. With Sova, you wear your purpose on their hands.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-contact-us">
+      <div class="about-container">
+          <!-- About Us Section -->
+          <div class="about-left">
+              <h2>About Us</h2>
+              <p>We are a passionate team dedicated to providing the best quality gloves for your everyday tasks. Our mission is to ensure your hands are well-protected while making your life easier.</p>
+              <div class="about-icons">
+                  <div class="icon">
+                      <i class="fas fa-heart"></i>
+                      <p>Passion</p>
+                  </div>
+                  <div class="icon">
+                      <i class="fas fa-users"></i>
+                      <p>Teamwork</p>
+                  </div>
+                  <div class="icon">
+                      <i class="fas fa-cogs"></i>
+                      <p>Innovation</p>
+                  </div>
+              </div>
+              <section class="contact-section">
+                <h2>Contact Info</h2>
+                <div class="contact-item">
+                    <p>Address: <span>Plot no 6/400, Siddheshwar Nagar, Opp Sinnar Gov I.T.I. , Sinnar, Nashik-422103</span></p>
+                </div>
+                <div class="contact-item">
+                    <p>Mobile Number: <span>+91 9325883978</span></p>
+                </div>
+                <div class="contact-item" style="align-self: center;">
+                    <p>Email: <span class="email">sovaeffortlesscleaning@gmail.com</span></p>
+                </div>
+                
+            </section>
+          </div>
+          
+          <!-- Contact Us Section -->
+          <div class="contact-right">
+              <h2>Contact Us</h2>
+              <p>If you have any questions or just want to reach out, we're here for you. Send us a message or follow us on our social media!</p>
+              <form class="contact-form">
+                  <input type="text" placeholder="Your Name" required>
+                  <input type="email" placeholder="Your Email" required>
+                  <textarea placeholder="Your Message" required></textarea>
+                  <button type="submit">Send Message</button>
+              </form>
+          </div>
+      </div>
+      
+      Follow us on
+      <!-- Social Media Links Section -->
+      <div class="social-media-links">
+          <a href="https://www.facebook.com/profile.php?id=61572253852761" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.youtube.com/channel/UCG8ytWI9Df6XBWDFiF_tfeA" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.instagram.com/sova_india?igsh=OXc4MWQ4cWdjazR3" class="social-icon"><i class="fab fa-instagram"></i></a>
+          
+      </div>
+
+      <div class="copyright">
+       
+        <p><a href="#" id="terms">Terms & Conditions</a></p>
+        <p><a href="#" id="privacy">Privacy Policy</a></p>
+        <p><a href="#" id="refund">Refund Policy</a></p>
+    
+        <!-- Popup for Terms & Conditions -->
+        <div id="termsPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" id="closeTerms">&times;</span>
+                <h2>Terms and Conditions</h2>
+                <p><strong> Introduction</strong><br>Welcome to the Sova Gloves Mission. By accessing or using our website and services, you agree to comply with these Terms of Service, our Privacy Policy, and other relevant policies. If you do not agree to these terms, please refrain from using our website or participating in the crowdfunding campaign.</p>
+        
+                <p><strong>Mission Overview</strong><br>Sova Gloves Mission is dedicated for the manufacturing and distribution of high-quality gloves to individuals in need, such as farmers, laborers, and others who require hand protection in their daily lives. The funds raised through this mission will be used solely for the purpose outlined in the mission, and by participating, you agree to contribute to this mission.</p>
+      
+        
+                <p><strong>Contributions</strong><br>By contributing to this mission, you acknowledge and agree that:
+                    <ul style="list-style-type: decimal">
+                        <li>Your contribution is voluntary and non-refundable once made.</li>
+                        <li>Your contribution is not a donation, and it will be treated as a contribution to the mission to receive rewards based on your chosen tier.</li>
+                        <li>All contributions are subject to the availability of rewards and fulfillment timelines as outlined in the mission.</li>
+                    </ul>
+                </p>
+        
+                <p><strong>Use of Funds</strong><br>All funds raised through this mission will be used exclusively for:
+                    <ul style="list-style-type: decimal">
+                        <li>Manufacturing and production of Sova Gloves.</li>
+                        <li>Packaging, shipping, and fulfillment of rewards.</li>
+                        <li>Marketing and promotional activities related to the mission.</li>
+                        <li>Covering operational expenses and supporting the overall movement goals.</li>
+                    </ul>
+                Any unused funds, after fulfillment, will be allocated towards the continued growth and improvement of the business and the Sova Gloves brand.</p>
+                
+                <p><strong>Terms of Use</strong></p>
+                <p>To access and use the Services, you agree to provide true, accurate and complete information to us
+                    during and after registration, and you shall be responsible for all acts done through the use of your
+                    registered account.</p>
+
+                <p>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness,
+                    performance, completeness or suitability of the information and materials offered on this website
+                    or through the Services, for any specific purpose. You acknowledge that such information and
+                    materials may contain inaccuracies or errors and we expressly exclude liability for any such
+                    inaccuracies or errors to the fullest extent permitted by law.</p>
+
+                <p>Your use of our Services and the websiteis solely at your own risk and discretion.. You are
+                    required to independently assess and ensure that the Services meet your requirements.</p>
+
+                <p>The contents of the Website and the Services are proprietary to Us and you will not have any
+                    authority to claim any intellectual property rights, title, or interest in its contents.</p>
+                
+                <p>You acknowledge that unauthorized use of the Website or the Services may lead to action against
+                    you as per these Terms or applicable laws.</p>
+
+                <p>You agree to pay us the charges associated with availing the Services.</p>
+
+                <p>You agree not to use the website and/ or Services for any purpose that is unlawful, illegal or
+                    forbidden by these Terms, or Indian or local laws that might apply to you.</p>
+
+                <p>You agree and acknowledge that website and the Services may contain links to other third party
+                    websites. On accessing these links, you will be governed by the terms of use, privacy policy and
+                    such other policies of such third party websites.</p>
+
+                <p>You understand that upon initiating a transaction for availing the Services you are entering into a
+                    legally binding and enforceable contract with the us for the Services.
+                    </p>
+
+                <p>You shall be entitled to claim a refund of the payment made by you in case we are not able to
+                    provide the Service. The timelines for such return and refund will be according to the specific
+                    Service you have availed or within the time period provided in our policies (as applicable). In case
+                    you do not raise a refund claim within the stipulated time, than this would make you ineligible for
+                    a refund.</p>
+
+                <p>Notwithstanding anything contained in these Terms, the parties shall not be liable for any failure to
+                    perform an obligation under these Terms if performance is prevented or delayed by a force majeure
+                    event.</p>
+
+                <p>These Terms and any dispute or claim relating to it, or its enforceability, shall be governed by and
+                    construed in accordance with the laws of India.</p>
+
+                <p>All disputes arising out of or in connection with these Terms shall be subject to the exclusive
+                    jurisdiction of the courts in Sinnar, Maharashtra.</p>
+
+                <p>All concerns or communications relating to these Terms must be communicated to us using the
+                    contact information provided on this website.</p>
+                
+                <p><strong> Rewards</strong><br>Upon successful contribution, you will receive a reward as described on the web page. The delivery of rewards will be initiated within 15-20 days from the date of contribution, subject to availability and fulfillment processes. We reserve the right to substitute rewards with comparable items if necessary. The rewards for needy ones will be processed in 7-10 days.</p>
+        
+        
+        
+                <p><strong> Cancellation of Campaign</strong><br>Sova Gloves reserves the right to cancel or suspend the crowdfunding campaign at any time. In the event of a cancellation, contributors will be notified, and funds will be refunded. However, if the campaign successfully reaches its funding goal, the campaign will proceed as planned, and no cancellations will be entertained after that point.</p>
+        
+                <p><strong> Limitation of Liability</strong><br>Sova Gloves, its affiliates, or any related parties will not be liable for any indirect, incidental, special, or consequential damages arising from the use of this website or participation in the campaign. We do not guarantee the outcome of the campaign, and we are not responsible for any delays or issues in fulfillment, delivery, or other aspects of the campaign which are not under our control.</p>
+        
+                <p><strong> Privacy and Data Protection</strong><br>By participating in the campaign, you agree to our Privacy Policy, which outlines how we collect, use, and protect your personal information. We are committed to safeguarding your privacy and ensuring that your data is used only for the purpose of the campaign and related communications.</p>
+        
+                <p><strong> No Tax Exemption</strong><br>It is important to note that Sova Gloves is not a non-governmental organization (NGO), and contributions made to this crowdfunding campaign are not tax-deductible. Participants will not be eligible for any tax exemptions or benefits associated with their contributions.</p>
+        
+                <p><strong> Governing Law</strong><br>These Terms of Service are governed by and construed in accordance with the laws of India. Any disputes arising from these terms will be subject to the exclusive jurisdiction of the courts in India.</p>
+        
+                <p><strong>Changes to Terms of Service</strong><br>Sova Gloves reserves the right to modify or update these Terms of Service at any time. Any changes will be posted on this page, and the updated terms will take effect immediately. We recommend reviewing this page periodically to stay informed about any changes to the terms.</p>
+        
+                <p><strong>Contact Information</strong><br>If you have any questions or concerns regarding these Terms of Service or any aspect of the Sova Gloves crowdfunding campaign, please contact us at:<br>
+                Email: sovaeffortlesscleaning@gmail.com<br>
+                Phone: +91 9325883978</p>
+        
+            </div>
+        </div>
+    
+        <!-- Popup for Privacy Policy -->
+        <div id="privacyPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" id="closePrivacy">&times;</span>
+                <h2>Privacy Policy</h2>
+                <p><strong>1. Introduction</strong><br>At Sova Gloves, we take your privacy very seriously and are committed to protecting the personal data you share with us. This Privacy Policy outlines how we collect, use, disclose, and protect your information when you participate in our crowdfunding campaign. By using our website and engaging with our campaign, you consent to the terms and practices described in this policy. If you disagree with any of the terms, please refrain from using the website and providing personal information.</p>
+        
+        <p><strong>2. Information We Collect</strong><br>We collect following information from our users:
+            <ul style="list-style-type: decimal">
+                <li><strong>Personal Information:</strong> When you contribute to the crowdfunding campaign, we ask for personal details such as your name, email address, phone number, shipping address, and payment information. This information is necessary to process your contribution, fulfill rewards, and communicate with you.</li>
+            </ul>
+        </p>
+
+        <p><strong>3. How We Use Your Information</strong><br>The personal information we collect is used for the following purposes:
+            <ul style="list-style-type: decimal">
+                <li><strong>To Process Contributions:</strong> We use your payment and contact details to process your contributions, confirm your participation in the crowdfunding campaign, and deliver rewards as per the campaign guidelines.</li>
+                <li><strong>To Communicate with You:</strong> We may send you emails, newsletters, or notifications regarding campaign updates, new product launches, promotions, or important information related to your contribution. If you opt-in, we may also send promotional offers and other marketing communications.</li>
+                <li><strong>To Fulfill Rewards:</strong> Your information will be used to ensure the timely delivery of rewards promised to contributors based on their selected contribution tier.</li>
+                
+            </ul>
+        </p>
+
+        <p><strong>4. Data Protection and Security</strong><br>We implement a variety of security measures to safeguard your personal information. This includes the use of encryption for sensitive information such as payment details and employing firewalls and secure servers. Despite these efforts, please understand that no method of data transmission over the internet is 100% secure, and we cannot guarantee absolute security of your data. You are responsible for maintaining the confidentiality of your login details and other personal account information.</p>
+
+        <p><strong>5. Sharing of Information</strong><br>We do not sell, trade, or rent your personal information to third parties. However, we may share your data in the following circumstances:
+            <ul style="list-style-type: decimal">
+                <li><strong>With Third-Party Service Providers:</strong> We may share your information with trusted partners who help us run the campaign, process payments, ship rewards, and handle customer service inquiries. These service providers are only authorized to use your information for the specific purpose for which it was provided.</li>
+                <li><strong>With Legal Authorities:</strong> If required by law, we may disclose your personal information to comply with a subpoena, court order, or other legal process.</li>
+                <li><strong>In the Event of Business Transfers:</strong> In case of a merger, acquisition, or sale of assets, your personal information may be transferred as part of the transaction, but we will notify you of any such changes.</li>
+            </ul>
+        </p>
+
+
+        <p><strong>7. Third-Party Links</strong><br>Our website may contain links to external websites, including social media platforms or third-party services. These sites have their own privacy policies, and we are not responsible for the content or practices of those sites. We encourage you to review the privacy policies of any third-party websites you visit before sharing any personal information.</p>
+
+        <p><strong>8. Data Retention</strong><br>We will retain your personal data for as long as necessary to fulfill the purposes for which it was collected, including for any legal, accounting, or reporting requirements. If you no longer wish to receive communications from us, you can unsubscribe or request that we delete your data. After the data retention period, your information will be securely deleted or anonymized.</p>
+
+        <p><strong>9. Your Rights and Choices</strong><br>You have the right to:
+            <ul style="list-style-type: decimal">
+                <li>Access the personal data we hold about you and request corrections if necessary.</li>
+                <li>Request the deletion of your personal data, subject to certain legal obligations.</li>
+                <li>Withdraw your consent for data processing (where applicable) at any time.</li>
+                <li>Opt-out of marketing communications or unsubscribe from our newsletters.</li>
+            </ul>
+        If you would like to exercise any of these rights, please contact us using the contact details provided below.</p>
+
+        <p><strong>10. Sova Gloves as a Business</strong><br>Please note that Sova Gloves is not a non-governmental organization (NGO), and this crowdfunding campaign does not offer tax exemptions. Contributions made to this campaign are considered as voluntary contributions to a business venture, and they are not tax-deductible. By participating, you understand and agree that no tax benefits are provided through your contributions.</p>
+
+        <p><strong>11. Changes to Privacy Policy</strong><br>We reserve the right to update or modify this Privacy Policy at any time. Any changes to the policy will be posted on this page, and the updated policy will take effect immediately after posting. We encourage you to periodically review this Privacy Policy for any updates or changes. By continuing to use the website after such updates, you agree to the revised policy.</p>
+
+
+            </div>
+        </div>
+    
+        <!-- Popup for Refund Policy -->
+        <div id="refundPopup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" id="closeRefund">&times;</span>
+                <h2>Refund and Cancellation</h2>
+
+                <p>Cancellations will be considered only if the request is made immediately after placing the order.
+                    However, the cancellation request may not be entertained if the orders have been communicated to the
+                    vendors/merchants and they have initiated the process of shipping them.
+                    </p>
+
+                <p>Sova Gloves does not accept cancellation requests for perishable items like flowers, eatables etc.
+                    However, refund/replacement can be made if the customer establishes that the quality of product
+                    delivered is not good.</p>
+
+                <p>In case of receipt of damaged or defective items please report the same to our Customer Service team.
+                    The request will, however, be entertained once the merchant has checked and determined the same at his
+                    own end. This should be reported within Only same day days of receipt of the products. In case you feel
+                    that the product received is not as shown on the site or as per your expectations, you must bring it to the
+                    notice of our customer service within Only same day days of receiving the product. The Customer
+                    Service Team after looking into your complaint will take an appropriate decision.</p>
+
+                <p>In case of complaints regarding products that come with a warranty from manufacturers, please refer
+                    the issue to them. In case of any Refunds approved by the Sova Gloves, it’ll take 9-15 Days days for the
+                    refund to be processed to the end customer.</p>
+                
+          
+                  <p><strong>Payment Gateway Responsibility</strong><br>
+                  The payment gateway provider is responsible for handling payment processing and securing payments. All payments made are securely processed through a third-party gateway, and once the transaction is completed, it cannot be undone except under the conditions mentioned above (such as campaign cancellation or defective product claims). In the case of any issues with the payment, we will work with the payment provider to resolve the matter as quickly as possible.</p>
+          
+            </div>
+        </div>
+  
+     
+
+  
+        
+    
+  
+          <p>&copy; 2025 Sova Effortless Cleaning. All rights reserved.</p>
+          
+  
+      
+  </section>
+
+    <script src="script.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</body>
+</html>
