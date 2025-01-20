@@ -658,7 +658,7 @@ contactForm.addEventListener('submit', function (e) {
 
 async function fetchTargetDate() {
   try {
-      const response = await fetch('http://localhost:3000/api/target-date');
+      const response = await fetch('/api/target-date');
       const data = await response.json();
       console.log('Fetched target date:', data.targetDate); // Debugging
       return new Date(data.targetDate);
